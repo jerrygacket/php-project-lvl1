@@ -7,4 +7,4 @@
     } else {
         require_once $autoloadPath2;
     }
-\Brain\Games\Cli\hello();
+    \Brain\Games\Cli\hello();
