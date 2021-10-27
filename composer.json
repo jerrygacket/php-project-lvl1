@@ -9,5 +9,8 @@
             "email": "jerrygacket@gmail.com"
         }
     ],
+    "bin": [
+	 "bin/brain-games"
+    ],
     "require": {}
 }
