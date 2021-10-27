@@ -1,0 +1,13 @@
+{
+    "name": "hexlet/code",
+    "description": "hexlet test proj",
+    "type": "project",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Крючков Артём Сергеевич",
+            "email": "jerrygacket@gmail.com"
+        }
+    ],
+    "require": {}
+}
