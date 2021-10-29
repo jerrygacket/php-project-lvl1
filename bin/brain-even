@@ -1,0 +1,34 @@
+#!/usr/bin/env php
+<?php
+
+use function Brain\Games\Cli\checkNumber;
+use function Brain\Games\Cli\getNumber;
+use function Brain\Games\Cli\startGame;
+use function Brain\Games\Cli\hello;
+use function cli\line;
+use function cli\prompt;
+
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
+
+$name = hello();
+startGame();
+
+for ($i = 0; $i < 3; $i++) {
+    $number = getNumber();
+    line('Question: ' . $number);
+    $answer = prompt('Your answer');
+    $correctAnswer = checkNumber($number);
+    if ($correctAnswer !== $answer) {
+        line("$answer is wrong answer ;(. Correct answer was $correctAnswer.\nLet's try again, $name!");
+        exit;
+    }
+    line('Correct!');
+}
+
+line("Congratulations, $name!");
