@@ -14,18 +14,3 @@ function hello()
 
     return $name;
 }
-
-function startGame()
-{
-    line('Answer "yes" if the number is even, otherwise answer "no".');
-}
-
-function getNumber()
-{
-    return rand(1, 100);
-}
-
-function checkNumber($num)
-{
-    return ($num % 2) === 0 ? 'yes' : 'no';
-}

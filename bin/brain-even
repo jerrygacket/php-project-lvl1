@@ -1,9 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-use function Brain\Games\Cli\checkNumber;
-use function Brain\Games\Cli\getNumber;
-use function Brain\Games\Cli\startGame;
 use function Brain\Games\Cli\hello;
 use function cli\line;
 use function cli\prompt;
@@ -14,6 +11,21 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath1;
 } else {
     require_once $autoloadPath2;
+}
+
+function startGame()
+{
+    line('Answer "yes" if the number is even, otherwise answer "no".');
+}
+
+function getNumber()
+{
+    return rand(1, 100);
+}
+
+function checkNumber($num)
+{
+    return ($num % 2) === 0 ? 'yes' : 'no';
 }
 
 $name = hello();
