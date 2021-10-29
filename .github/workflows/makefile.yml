@@ -13,6 +13,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Setup PHP
+      # Action gives to setup the PHP environment to test application
+      # https://github.com/shivammathur/setup-php
+      with:
+        # Specify the PHP version
+        php-version: '7.4'
+    - name: Install
+      # Install project
+      run: make install
     
     - name: linter
       run: make lint
