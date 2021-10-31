@@ -18,7 +18,7 @@ function checkAnswer(string $question): string
 {
     $matches = explode(' ', $question);
 
-    return strval(gcd($matches[0], $matches[1]));
+    return strval(gcd(intval($matches[0]), intval($matches[1])));
 }
 
 /**
