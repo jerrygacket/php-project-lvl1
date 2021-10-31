@@ -14,7 +14,10 @@ function getQuiz(): string
 
     $progression = getProgression($begin, $length, $step);
     // не подменяем послед
-    $delKey = rand(min(array_keys($progression)) + 1, max(array_keys($progression)) - 1);
+    $delKey = rand(
+        (int) min(array_keys($progression)) + 1,
+        (int) max(array_keys($progression)) - 1
+    );
     $progression[$delKey] = '..';
 
     return implode(' ', $progression);
