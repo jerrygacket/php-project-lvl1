@@ -13,8 +13,8 @@ function startGame($greetings)
 function playGame($name, $game)
 {
     for ($i = 0; $i < 3; $i++) {
-        $getQuiz = '\\Brain\\Games\\Games\\' . $game . '\\getQuiz';
-        $checkAnswer = '\\Brain\\Games\\Games\\' . $game . '\\checkAnswer';
+        $getQuiz = '\\Brain\\Games\\Game\\' . $game . '\\getQuiz';
+        $checkAnswer = '\\Brain\\Games\\Game\\' . $game . '\\checkAnswer';
         $question = $getQuiz();
         line('Question: ' . $question);
         $answer = prompt('Your answer');

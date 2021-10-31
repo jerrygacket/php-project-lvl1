@@ -26,11 +26,11 @@
             "src/Cli.php",
             "src/Engine.php",
             "src/Functions.php",
-            "src/Games/Even.php",
-            "src/Games/Calc.php",
-            "src/Games/Gcd.php",
-            "src/Games/Progression.php",
-            "src/Games/Prime.php"
+            "src/Game/Even.php",
+            "src/Game/Calc.php",
+            "src/Game/Gcd.php",
+            "src/Game/Progression.php",
+            "src/Game/Prime.php"
         ]
     }
 }
