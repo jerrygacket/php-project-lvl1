@@ -5,12 +5,12 @@ namespace Brain\Games\Game\Even;
 use function Brain\Games\Engine\startGame;
 use function Brain\Games\Engine\playGame;
 
-function getQuiz()
+function getQuiz(): int
 {
     return rand(1, 100);
 }
 
-function checkAnswer($question)
+function checkAnswer(int $question): string
 {
     return ($question % 2) === 0 ? 'yes' : 'no';
 }

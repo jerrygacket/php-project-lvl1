@@ -11,7 +11,7 @@ function getQuiz(): string
     return rand(1, 100);
 }
 
-function checkAnswer($question): string
+function checkAnswer(string $question): string
 {
     return isPrimeCheck(intval($question)) ? 'yes' : 'no';
 }

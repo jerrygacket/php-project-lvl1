@@ -5,12 +5,12 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function startGame($greetings)
+function startGame(string $greetings)
 {
     line($greetings);
 }
 
-function playGame($name, $game)
+function playGame(string $name, string $game)
 {
     for ($i = 0; $i < 3; $i++) {
         $getQuiz = '\\Brain\\Games\\Game\\' . $game . '\\getQuiz';
@@ -27,7 +27,7 @@ function playGame($name, $game)
     endGame($name);
 }
 
-function falseAnswer($answer, $correctAnswer, $name)
+function falseAnswer(string $answer, string $correctAnswer, string $name)
 {
     line("$answer is wrong answer ;(. Correct answer was $correctAnswer.\nLet's try again, $name!");
     exit;
@@ -36,4 +36,5 @@ function falseAnswer($answer, $correctAnswer, $name)
 function endGame($name)
 {
     line("Congratulations, $name!");
+    exit;
 }

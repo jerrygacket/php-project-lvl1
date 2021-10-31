@@ -5,7 +5,7 @@ namespace Brain\Games\Game\Calc;
 use function Brain\Games\Engine\playGame;
 use function Brain\Games\Engine\startGame;
 
-function getQuiz()
+function getQuiz(): string
 {
     $first = rand(1, 100);
     $second = rand(1, 100);
@@ -23,7 +23,7 @@ function getQuiz()
     return implode(' ', compact('first', 'action', 'second'));
 }
 
-function checkAnswer($question)
+function checkAnswer(string $question): string
 {
     $matches = [];
     $p = '';
@@ -32,16 +32,16 @@ function checkAnswer($question)
 
         switch ($operator) {
             case '+':
-                $p = $matches[1] + $matches[3];
+                $p = (int) $matches[1] + (int) $matches[3];
                 break;
             case '-':
-                $p = $matches[1] - $matches[3];
+                $p = (int) $matches[1] - (int) $matches[3];
                 break;
             case '*':
-                $p = $matches[1] * $matches[3];
+                $p = (int) $matches[1] * (int) $matches[3];
                 break;
             case '/':
-                $p = $matches[1] / $matches[3];
+                $p = (int) $matches[1] / (int) $matches[3];
                 break;
         }
     }

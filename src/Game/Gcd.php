@@ -6,7 +6,7 @@ use function Brain\Games\Engine\playGame;
 use function Brain\Games\Engine\startGame;
 use function Brain\Games\Functions\gcd;
 
-function getQuiz()
+function getQuiz(): string
 {
     $first = rand(1, 100);
     $second = rand(1, 100);
@@ -14,7 +14,7 @@ function getQuiz()
     return implode(' ', compact('first', 'second'));
 }
 
-function checkAnswer($question)
+function checkAnswer(string $question): string
 {
     $matches = explode(' ', $question);
 

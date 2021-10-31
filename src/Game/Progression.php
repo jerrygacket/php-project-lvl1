@@ -20,7 +20,7 @@ function getQuiz(): string
     return implode(' ', $progression);
 }
 
-function checkAnswer($question): string
+function checkAnswer(string $question): string
 {
     $matches = explode(' ', $question);
     $length = count($matches);
