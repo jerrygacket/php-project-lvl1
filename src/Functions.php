@@ -23,7 +23,7 @@ function getProgression(int $begin, int $length, int $step): array
 function isPrimeCheck(int $number): bool
 {
     if ($number === 1) {
-        return true;
+        return false;
     }
 
     for ($i = 2; $i <= sqrt($number); $i++) {
