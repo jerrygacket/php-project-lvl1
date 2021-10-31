@@ -9,6 +9,7 @@ function getQuiz(): string
 {
     $first = rand(1, 100);
     $second = rand(1, 100);
+    $action = '';
     switch (rand(0, 2)) {
         case 0:
             $action = '+';

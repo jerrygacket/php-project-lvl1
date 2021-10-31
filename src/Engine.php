@@ -10,15 +10,19 @@ function startGame(string $greetings)
     line($greetings);
 }
 
+/**
+ * @param string $name
+ * @param string $game
+ */
 function playGame(string $name, string $game)
 {
     for ($i = 0; $i < 3; $i++) {
         $getQuiz = '\\Brain\\Games\\Game\\' . $game . '\\getQuiz';
         $checkAnswer = '\\Brain\\Games\\Game\\' . $game . '\\checkAnswer';
-        $question = $getQuiz();
+        $question = is_callable($getQuiz) ? $getQuiz() : '';
         line('Question: ' . $question);
         $answer = prompt('Your answer');
-        $correctAnswer = $checkAnswer($question);
+        $correctAnswer = is_callable($checkAnswer) ? $checkAnswer($question) : null;
         if ($correctAnswer !== $answer) {
             falseAnswer($answer, $correctAnswer, $name);
         }
