@@ -5,6 +5,9 @@ namespace Brain\Games\Game\Calc;
 use function Brain\Games\Engine\playGame;
 use function Brain\Games\Engine\startGame;
 
+/**
+ * @return string
+ */
 function getQuiz(): string
 {
     $first = rand(1, 100);
@@ -24,6 +27,10 @@ function getQuiz(): string
     return implode(' ', compact('first', 'action', 'second'));
 }
 
+/**
+ * @param string $question
+ * @return string
+ */
 function checkAnswer(string $question): string
 {
     $matches = [];
@@ -50,6 +57,9 @@ function checkAnswer(string $question): string
     return strval($p);
 }
 
+/**
+ * @return void
+ */
 function beginGame()
 {
     $name = \Brain\Games\Cli\hello();

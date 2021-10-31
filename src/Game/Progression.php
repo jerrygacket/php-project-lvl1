@@ -35,6 +35,9 @@ function checkAnswer(string $question): string
     return '';
 }
 
+/**
+ * @return void
+ */
 function beginGame()
 {
     $name = \Brain\Games\Cli\hello();

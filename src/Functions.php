@@ -2,12 +2,12 @@
 
 namespace Brain\Games\Functions;
 
-function gcd($a, $b)
+function gcd(int $a, int $b): int
 {
     return ($a % $b) ? gcd($b, $a % $b) : $b;
 }
 
-function getProgression($begin, $length, $step): array
+function getProgression(int $begin, int $length, int $step): array
 {
     $result[0] = $begin;
     $i = 1;
@@ -19,7 +19,7 @@ function getProgression($begin, $length, $step): array
     return $result;
 }
 
-function isPrimeCheck($number): bool
+function isPrimeCheck(int $number): bool
 {
     if ($number === 1) {
         return true;

@@ -49,10 +49,10 @@ function falseAnswer(string $answer, string $correctAnswer, string $name)
 }
 
 /**
- * @param $name
+ * @param string $name
  * @return void
  */
-function endGame($name)
+function endGame(string $name)
 {
     line("Congratulations, $name!");
     exit;

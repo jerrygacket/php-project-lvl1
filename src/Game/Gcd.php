@@ -21,6 +21,9 @@ function checkAnswer(string $question): string
     return strval(gcd($matches[0], $matches[1]));
 }
 
+/**
+ * @return void
+ */
 function beginGame()
 {
     $name = \Brain\Games\Cli\hello();

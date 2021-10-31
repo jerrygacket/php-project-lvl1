@@ -15,6 +15,9 @@ function checkAnswer(int $question): string
     return ($question % 2) === 0 ? 'yes' : 'no';
 }
 
+/**
+ * @return void
+ */
 function beginGame()
 {
     $name = \Brain\Games\Cli\hello();
