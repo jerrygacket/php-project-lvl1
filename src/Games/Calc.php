@@ -7,7 +7,6 @@ use function Brain\Games\Engine\startGame;
 
 function getQuiz()
 {
-//    $actions = '+';
     $first = rand(1, 100);
     $second = rand(1, 100);
     switch (rand(0, 2)) {
