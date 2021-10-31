@@ -1,3 +1,17 @@
+### Install
+```shell
+git clone git clone git@github.com:jerrygacket/php-project-lvl1.git
+cd php-project-lvl1
+make install
+```
+
+### Run
+ * _make brain-even_ - even game
+ * _make brain-calc_ - calc game
+ * _make brain-gcd_ - gcd game
+ * _make brain-progression_ - progression game
+ * _make brain-prime_ - prime game
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/jerrygacket/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/jerrygacket/php-project-lvl1/actions)
 
