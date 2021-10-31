@@ -27,8 +27,8 @@ function checkAnswer(string $question): string
 {
     $matches = explode(' ', $question);
     $length = count($matches);
-    $step = ($matches[$length - 1] - $matches[0]) / ($length - 1);
-    $realQuestion = getProgression($matches[0], count($matches), $step);
+    $step = round(((int) $matches[$length - 1] - (int) $matches[0]) / ((int) $length - 1));
+    $realQuestion = getProgression((int) $matches[0], count($matches), $step);
     foreach ($matches as $key => $item) {
         if ($item === '..') {
             return strval($realQuestion[$key]);
