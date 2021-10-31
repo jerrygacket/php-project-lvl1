@@ -4,6 +4,7 @@ namespace Brain\Games\Games\Progression;
 
 use function Brain\Games\Engine\playGame;
 use function Brain\Games\Engine\startGame;
+use function Brain\Games\Functions\getProgression;
 
 function getQuiz(): string
 {
@@ -17,18 +18,6 @@ function getQuiz(): string
     $progression[$delKey] = '..';
 
     return implode(' ', $progression);
-}
-
-function getProgression($begin, $length, $step)
-{
-    $result[0] = $begin;
-    $i = 1;
-    while ($i < $length) {
-        $result[$i] = $result[$i-1] + $step;
-        $i++;
-    }
-
-    return $result;
 }
 
 function checkAnswer($question): string
@@ -45,7 +34,6 @@ function checkAnswer($question): string
 
     return '';
 }
-
 
 function beginGame()
 {

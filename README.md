@@ -11,4 +11,6 @@
 
 [bran-gcd record](https://asciinema.org/a/rWq8qANTN9Cpz6x7031ztdUa0)
 
-[bran-progression record]( https://asciinema.org/connect/1e1ba3b2-5f70-49dc-9f65-54f3b5071183)
+[bran-progression record](https://asciinema.org/connect/1e1ba3b2-5f70-49dc-9f65-54f3b5071183)
+
+[bran-prime record](https://asciinema.org/a/3Vxa2GwYVMImzOaLm9RX1IRuK)

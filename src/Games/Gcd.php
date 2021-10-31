@@ -4,6 +4,7 @@ namespace Brain\Games\Games\Gcd;
 
 use function Brain\Games\Engine\playGame;
 use function Brain\Games\Engine\startGame;
+use function Brain\Games\Functions\gcd;
 
 function getQuiz()
 {
@@ -18,11 +19,6 @@ function checkAnswer($question)
     $matches = explode(' ', $question);
 
     return strval(gcd($matches[0], $matches[1]));
-}
-
-function gcd($a, $b)
-{
-    return ($a % $b) ? gcd($b, $a % $b) : $b;
 }
 
 function beginGame()
