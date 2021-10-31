@@ -17,7 +17,6 @@ function checkAnswer($question)
 {
     $matches = explode(' ', $question);
 
-
     return strval(gcd($matches[0], $matches[1]));
 }
 
